@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Task_1_Rectangle_Using_Simple_DDA",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Task_1_Rectangle_Using_Simple_DDA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Task_1_Rectangle_Using_Simple_DDA-Debug-98e4ba8c13c406661694.json",
+					"name" : "Task_1_Rectangle_Using_Simple_DDA",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Programming/FCAI - Assignments & Projects/Year 3 CS/Graphics/Task 1 Rectangle Using Simple DDA/cmake-build-debug",
+		"source" : "E:/Programming/FCAI - Assignments & Projects/Year 3 CS/Graphics/Task 1 Rectangle Using Simple DDA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
