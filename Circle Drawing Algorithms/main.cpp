@@ -49,8 +49,23 @@ void iterativePolarAlgorithm(HDC hdc, int xc, int yc, int R, COLORREF color){
     }
 }
 
-void midPointAlgorithm(){
-
+void Bresenham(HDC hdc, int xc, int yc, int R, COLORREF color){
+    int x =0, y = R;
+    int d = 1 - R, d1 = 3 , d2 = 5 - 2 * R;
+    draw8Points(hdc, xc, yc, x, y, color);
+    while(x<y){
+        if(d<0){
+            d += d1;
+            d2 += 2;
+        }
+        else{
+            d += d2;
+            d2 += 4;
+            y--;
+        }
+        x++; d1+=2;
+        draw8Points(hdc, xc, yc, x, y, color);
+    }
 }
 
 LRESULT WINAPI WndProc(HWND hwnd, UINT m, WPARAM wp, LPARAM lp)
@@ -78,7 +93,7 @@ LRESULT WINAPI WndProc(HWND hwnd, UINT m, WPARAM wp, LPARAM lp)
                 int radius = static_cast<int>(sqrt(pow(x - center.x, 2) + pow(y - center.y, 2)));
 
                 // Draw the circle using one of the drawing algorithms
-                iterativePolarAlgorithm(hdc, center.x, center.y, radius, RGB(0, 0, 255)); // Example color: Blue
+                Bresenham(hdc, center.x, center.y, radius, RGB(0, 0, 255)); // Example color: Blue
 
                 ReleaseDC(hwnd, hdc);
 
